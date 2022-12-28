@@ -24,7 +24,7 @@ const server = http.createServer((req, res) => {
       });
     }
   } else if (req.url === "/writeinfile") {
-    fs.appendFile("./employee.txt", "Employee names are as follows:", (err) => {
+    fs.writeFile("./employee.txt", "Employee names are as follows:", (err) => {
       if (err) {
         console.log(err);
       } else {
